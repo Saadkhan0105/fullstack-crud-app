@@ -1,0 +1,43 @@
+/* src/components/UpdateUser.css */
+.update-user-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-user-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.update-user-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.update-user-container label {
+  font-size: 16px;
+  color: #333;
+}
+
+.update-user-container input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.update-user-container button {
+  width: 150px;
+  align-self: center;
+  grid-column: span 2;
+  margin-top: 20px;
+}

@@ -1,91 +1,13 @@
-/* Global Styles */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f1f1f1; /* Light background */
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Roboto', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Navbar */
-nav {
-  background-color: #00bcd4; /* Catchy bright color */
-  padding: 15px;
-  font-size: 18px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #0097a7; /* Darker shade on hover */
-}
-
-/* Add User and Update User Forms */
-.form-container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 14px;
-  background-color: #00bcd4;
-  color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #0097a7;
-}
-
-/* Home Page */
+/* src/components/Home.css */
 .home-container {
   max-width: 900px;
   margin: 40px auto;
   padding: 25px;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
 }
 
 .home-container h2 {
@@ -107,7 +29,7 @@ button[type="submit"]:hover {
 }
 
 .home-container .intro-content {
-  background-color: #00bcd4; /* Vibrant background for content section */
+  background-color: #ffffff;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -116,7 +38,7 @@ button[type="submit"]:hover {
 
 .home-container .intro-content h3 {
   font-size: 28px;
-  color: #ffffff;
+  color: #333;
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: capitalize;
@@ -129,7 +51,7 @@ button[type="submit"]:hover {
 
 .home-container .intro-content ul li {
   font-size: 18px;
-  color: #fff;
+  color: #555;
   margin-bottom: 15px;
   padding-left: 20px;
   position: relative;
@@ -149,7 +71,7 @@ button[type="submit"]:hover {
   width: 250px;
   padding: 12px;
   margin: 20px auto;
-  background-color: #0097a7;
+  background-color: #007bff;
   color: white;
   text-align: center;
   font-size: 18px;
@@ -160,7 +82,7 @@ button[type="submit"]:hover {
 }
 
 .home-container .intro-btn:hover {
-  background-color: #007c91;
+  background-color: #0056b3;
 }
 
 .home-container .intro-btn:active {

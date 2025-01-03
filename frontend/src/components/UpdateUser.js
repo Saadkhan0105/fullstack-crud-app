@@ -1,8 +1,12 @@
-// src/components/AddUser.js
-import React, { useState } from "react";
-import "./AddUser.css"; // Import specific CSS for AddUser component
+// src/components/UpdateUser.js
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import "./UpdateUser.css"; // Import specific CSS for UpdateUser component
 
-function AddUser() {
+function UpdateUser() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -10,33 +14,35 @@ function AddUser() {
     dob: "",
   });
 
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/users/${id}`)
+      .then((response) => response.json())
+      .then((data) => setUser(data))
+      .catch((error) => console.error("Error fetching user data:", error));
+  }, [id]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8080/api/users", {
-      method: "POST",
+    fetch(`http://localhost:8080/api/users/${id}`, {
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
     })
       .then((response) => {
         if (response.ok) {
-          alert("User added successfully!");
-          setUser({
-            name: "",
-            email: "",
-            password: "",
-            dob: "",
-          });
+          alert("User updated successfully!");
+          navigate("/list-users");
         } else {
-          alert("Failed to add user.");
+          alert("Failed to update user.");
         }
       })
-      .catch((error) => console.error("Error adding user:", error));
+      .catch((error) => console.error("Error updating user:", error));
   };
 
   return (
-    <div className="add-user-container">
-      <h2>Add New User</h2>
+    <div className="update-user-container">
+      <h2>Update User</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
@@ -78,10 +84,10 @@ function AddUser() {
           />
         </label>
         <br />
-        <button type="submit">Add User</button>
+        <button type="submit">Update User</button>
       </form>
     </div>
   );
 }
 
-export default AddUser;
+export default UpdateUser;
