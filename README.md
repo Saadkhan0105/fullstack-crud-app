@@ -134,6 +134,25 @@ Frontend:
 - React
 - CSS
 
+### Folder Structure
+fullstack-crud-app/
+├── backend/                # Node.js + Express backend
+│   ├── config/             # Database configuration
+│   ├── controllers/        # Backend logic for user operations
+│   ├── models/             # MySQL models
+│   ├── routes/             # API routes for CRUD operations
+│   ├── .env                # Environment variables (DB credentials)
+│   └── server.js           # Main server file
+├── frontend/               # React frontend
+│   ├── src/
+│   │   ├── components/     # React components for Add User, List Users, etc.
+│   │   ├── App.js          # Main React app
+│   │   ├── index.js        # App entry point
+│   │   └── App.css         # Styling for frontend components
+├── .gitignore              # Git ignore file
+├── README.md               # Project instructions
+└── package.json            # Project dependencies and scripts
+
 ## Usage
 
 ### Adding Users
