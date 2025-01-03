@@ -61,6 +61,7 @@ fullstack-crud-app/
 
 │   │   ├── App.js           # Main React app
 │   │   ├── index.js         # App entry point
+│   │   ├── index.css         # Styling for the app
 │   │   └── App.css          # Styling for frontend components
 ├── .gitignore               # Git ignore file
 ├── package.json             # Project dependencies and scripts
