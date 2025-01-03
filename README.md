@@ -38,21 +38,34 @@ Make sure the following are installed on your system:
 ```plaintext
 fullstack-crud-app/
 ├── backend/                 # Node.js + Express backend
-│   ├── config/              # Database configuration
+│   ├── db/                  # Database configuration
+          ├── dbConnection.js
 │   ├── controllers/         # Backend logic for user operations
-│   ├── models/              # MySQL models
+          ├── userController.js
 │   ├── routes/              # API routes for CRUD operations
+          ├── userRoutes.js
 │   ├── .env                 # Environment variables (DB credentials)
 │   └── server.js            # Main server file
 ├── frontend/                # React frontend
 │   ├── src/
 │   │   ├── components/      # React components for Add User, List Users, etc.
+                  ├── AddUser.js
+                  ├── AddUser.css
+                  ├── Home.js
+                  ├── Home.css
+                  ├── Navbar.js
+                  ├── UpdateUser.js
+                  ├── UpdateUser.css
+                  ├── UserList.css
+                  ├── UserList.js
+
 │   │   ├── App.js           # Main React app
 │   │   ├── index.js         # App entry point
 │   │   └── App.css          # Styling for frontend components
 ├── .gitignore               # Git ignore file
-├── README.md                # Project instructions
-└── package.json             # Project dependencies and scripts
+├── package.json             # Project dependencies and scripts
+└── README.md                # Project instructions
+
 ```
 
 ## Installation and Setup
